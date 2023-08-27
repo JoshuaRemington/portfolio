@@ -1,6 +1,6 @@
 import './portfolio.css'
 import React, {Component} from 'react';
-import clouds from './imgs/clouds.jpeg';
+import cloudvideo from './imgs/clouds.mp4';
 import github from './imgs/github.png';
 import logo from './imgs/logo.png';
 import cloudtext from './imgs/cloudtext.png';
@@ -11,9 +11,13 @@ import clogo from './imgs/c++logo.svg';
 import pythonlogo from './imgs/pythonlogo.svg';
 import htmllogo from './imgs/htmllogo.svg';
 import gitlogo from './imgs/gitlogo.svg';
+import projectPathfinding from './imgs/pathfinding.png';
 
 
 let aboutText = 'I am a college student currently in my senior year at California State University San Marcos.\n\nMy interests in programming include AI, web design, and software engineering.';
+let pathfinding = 'The Pathfinding Visualizer is an interactive web application that allows users to visualize various pathfinding algorithms in action. This tool provides a visual representation of how algorithms like Dijkstra\'s, A*, and others find the shortest path between two points on a grid. It is a great educational tool for learning and understanding different pathfinding techniques.';
+let chessdescription = 'Simple Chess game created in python that uses the minimax algorithm and alpha beta pruning. Focus on functionality and easy to use user interface';
+let portfoliodescription = 'Portfolio website made using react to showcase different skills and projects that I have created. Includes methods to contact me';
 
 export default class Portfolio extends Component {
     constructor(props) {
@@ -24,7 +28,7 @@ export default class Portfolio extends Component {
     
     render() {
         return( 
-        <div className='scroll'>
+        <div>
             <div className='navbar'>
                 <img className='navbar-logo' src={logo} alt='Logo'></img>
                 <div className='navbar-text-1'>JOSHUA REMINGTON</div>
@@ -37,7 +41,7 @@ export default class Portfolio extends Component {
                 <a className='navbar-text-linking' href="/">Home</a>
             </div>
             <div className='initial-container'>
-                <img className='image' src={clouds} alt='background'></img>
+                <video className='video' src={cloudvideo} autoPlay loop muted alt='background'></video>
                 <div className='initial-text'>JOSHUA REMINGTON</div>
                 <div className='initial-subtext'>I am currently pursuing my bachelor's degree in computer science</div>
                 {/*<a className='social-link' href="https://github.com/JoshuaRemington" target="_blank" rel="noreferrer">
@@ -65,9 +69,43 @@ export default class Portfolio extends Component {
                     <div className='skills'><img className='skills-logo' src={clogo} alt='react'></img>C++</div>
                 </div>
             </div>
-            <div id='projects' className='section-container'>
+            <div id='projects' className='divider'></div>
+            <div className='section-container'>
+                <div className='section-text'>Projects</div>
+                <div className='underlining'></div>
+                <div className='project-container'>
+                    <div className='project-title'>Pathfinding Visualizer</div>
+                    <div className='project-text'>{pathfinding}</div>
+                    <div className='project-image'>
+                        <a className='project-linking' href='https://github.com/JoshuaRemington/pathfindingvisualization' target='_blank' rel="noreferrer">Github</a>
+                        <a className='project-linking' href='https://joshuaremington.github.io/pathfindingvisualization/' target='_blank' rel="noreferrer">Website</a>
+                        <img src={projectPathfinding} alt='pathfinding'></img>
+                        
+                    </div>
+                    <div className='project-logo-text'>React</div>
+                    <img className='project-logo' src={reactlogo} alt='react'></img>
+                    <img className='project-logo' src={htmllogo} alt='html'></img>
+                    <img className='project-logo' src={csslogo} alt='css'></img>
+                    <img className='project-logo' src={javascriptlogo} alt='javascript'></img>
+                </div>
+                <div className='project-container'>
+                    <div className='project-title'>Chess</div>
+                    <div className='project-text'>{chessdescription}</div>
+                    <img className='project-logo' src={pythonlogo} alt='react'></img>
+                </div>
+                <div className='project-container'>
+                    <div className='project-title'>Portfolio</div>
+                    <div className='project-text'>{portfoliodescription}</div>
+                    <img className='project-logo' src={reactlogo} alt='react'></img>
+                    <img className='project-logo' src={htmllogo} alt='html'></img>
+                    <img className='project-logo' src={csslogo} alt='css'></img>
+                    <img className='project-logo' src={javascriptlogo} alt='javascript'></img>
+                </div>
             </div>
-            <div id='contact' className='section-container'>
+            <div className='divider'></div>
+            <div className='section-container'>
+                <div id='contact' className='section-text'>Contact</div>
+                <div className='underlining'></div>
             </div>
         </div>
         );
