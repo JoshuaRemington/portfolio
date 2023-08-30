@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .initial-container {
     background-color: #eff0f1;
     height: 75vh;
@@ -15,6 +19,56 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.cloud {
+    position: absolute;
+    top:20%;
+    left:10%;
+    width: 25vw;
+    height: 8vw;
+    background-color: grey;
+    border-radius: 10vw;
+    opacity: 70%;
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    top: -5vw;
+    left: 3vw;
+    width: 10vw;
+    height: 10vw;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: 7vw 0 0 1vw grey;
+    
+}
+
+.rain {
+    position: relative;
+    display: flex;
+    padding: 0 4vw;
+    opacity: 40%;
+}
+
+.rain span {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    top: 8vw;
+    background-color: #5AC8FA;
+    margin: 0 0.2vw;
+    border-radius: 50%;
+    animation: rainingDown 2s linear infinite;
+    animation-duration: calc(11s / attr(offset));
+    transform-origin: bottom;
+}
+
+@keyframes rainingDown {
+    0% {transform: translateY(0vh) scale(1);}
+    70% {transform: translateY(60vh) scale(0.8);}
+    100% {transform: translateY(60vh) scale(0);}
 }
 
 .initial-text {
@@ -46,12 +100,12 @@
 .section-container {
     background-color: rgb(241, 241, 241);
     width: 100vw;
-    height: 60vh;
+    height: 100vh;
 }
 
 .divider {
     background-color: rgb(241, 241, 241);
-    width:100%;
+    width:100vw;
     height: 10vh;
 }
 
@@ -61,7 +115,7 @@
     background-color: #5AC8FA;
     margin-bottom: 1vh;
     position: relative;
-    left:45%
+    left:45%;
 }
 
 .menu-image {
@@ -163,6 +217,7 @@
 
 .textbox {
     position: relative;
+    top:-4%;
     width: 60vw;
     height: 40vw;
     max-width: 70em;
@@ -177,7 +232,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color:#333;
-    font-size: clamp(0.5vw, 1.9vw, 1.9vw);
+    font-size: clamp(0.5vw, 1.8vw, 1.8vw);
     font-weight: 500;
     white-space: pre-line;
 }
@@ -242,8 +297,9 @@
     flex-direction: column;
     top: 0%;
     right: 5%;
-    width:35%;
-    max-width: 500px;
+    width: 25vw;
+    max-width: 350px;
+    max-height: 100%;
 }
 
 .project-image-links {
@@ -255,7 +311,7 @@
     text-decoration: none;
     color: #333;
     font-weight: 700;
-    font-size: clamp(0.5em,2vw,1.7vw);
+    font-size: clamp(0.5em,1.7vw,2vw);
 }
 
 .project-linking:hover {
@@ -280,4 +336,13 @@
     color: #333;
     font-weight: 500;
     opacity: 0;
+}
+
+.contact-text {
+    width: 50%;
+    transform: translate(50%);
+    margin-top: 20px;
+    color: #333;
+    font-weight: 500;
+    font-size: clamp(0.5em,2.2vw,2.2em);
 }
