@@ -28,6 +28,7 @@ body {
     width: 25vw;
     height: 8vw;
     background-color: grey;
+    box-shadow: rgb(151, 151, 151) 5px 5px 5px;
     border-radius: 10vw;
     opacity: 70%;
 }
@@ -73,27 +74,25 @@ body {
 
 .initial-text {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
     color: #333;
-    text-shadow: 0 20px 40px rgb(255, 255, 255);
     font-size: clamp(1rem, 6vw, 6rem); 
-    font-weight: 500;
+    font-weight: 600;
     z-index: 1000;
 }
 
 .initial-subtext {
     position: absolute;
-    top: 55%;
+    top: 63%;
     left: 50%;
     width: 60%;
     transform: translate(-50%, -50%);
     color: #333;
-    text-shadow: 0 20px 40px #ffffff;
     font-size: clamp(0.5rem, 2.5vw, 4rem);
-    font-weight: 350;
+    font-weight: 250;
     z-index: 100;
 }
 
@@ -126,7 +125,7 @@ body {
 .navbar {
     background-color: rgb(255, 255, 255);
     position: fixed;
-    height: 7vh;
+    height: 6vh;
     width: 100%;
     left: 0;
     top: 0;
@@ -145,19 +144,19 @@ body {
     color: #333;
     position: absolute;
     left:10%;
-    top: 25%;
-    font-size: clamp(0.5rem, 2.5vw, 2.5rem);
+    top: 40%;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     font-weight: 700;
 }
 
 .navbar-text-linking {
     color: #333;
     float:right;
-    top: 25%;
+    top: 40%;
     margin: 1vw;
     margin-top: 0;
     position: relative;
-    font-size: clamp(0.5rem, 2.5vw, 2.5rem);
+    font-size: clamp(0.5rem, 2vw, 2rem);
     font-weight: 700;
     text-decoration: none;
 }
@@ -165,26 +164,6 @@ body {
 .navbar-text-linking:hover {
     color: rgb(112, 182, 247);
 }
-
-/*
-.social-link {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-50%, -50%);
-    width: 2vw;
-    height: 8vh;
-    z-index: 100;
-    display: inline;
-}
-
-.github-image {
-    width: 5vh;
-    height: 5vh;
-    top: 100%;
-    position: absolute;
-}
-*/
 
 .github-link {
     position: absolute;
@@ -223,18 +202,30 @@ body {
     max-width: 70em;
     max-height: 50em;
     margin: 1rem;
-    text-align: center;
+}
+
+.textbox-title {
+    position: absolute;
+    top:25%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    color:#333;
+    font-size: clamp(0.5vw,3vw, 3rem);
+    font-weight: 700;
+    white-space: pre-line;
+    text-align: left; 
 }
 
 .textbox-text {
     position: absolute;
-    top:60%;
-    left: 50%;
+    top: 60%;
+    left: 40%;
     transform: translate(-50%, -50%);
     color:#333;
-    font-size: clamp(0.5vw, 1.8vw, 1.8vw);
-    font-weight: 500;
+    font-size: clamp(0.5vw, 1.6vw, 1.6rem);
+    font-weight: 400;
     white-space: pre-line;
+    text-align: left; 
 }
 
 .skills-container {
@@ -297,7 +288,7 @@ body {
     flex-direction: column;
     top: 0%;
     right: 5%;
-    width: 25vw;
+    width: 35vw;
     max-width: 350px;
     max-height: 100%;
 }
@@ -320,7 +311,7 @@ body {
 
 .project-logo {
     position: relative;
-    height: 25%;
+    height: 7vw;
     width: height;
     left: -25%;
     top: 10%;
@@ -345,4 +336,14 @@ body {
     color: #333;
     font-weight: 500;
     font-size: clamp(0.5em,2.2vw,2.2em);
+}
+
+.bottom-container {
+    width: 100%;
+    height: 4vh;
+}
+
+.bottom-text {
+    color: #333;
+    font-size: 1.2vh;
 }

@@ -1,3 +1,7 @@
+*{
+    font-family: arial;
+}
+
 .contact-form {
     background-color: white;
     box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
@@ -50,7 +54,7 @@ input[type='email'] {
     background-color: #eff0f1;
     height:4vh;
     font-size: 16px;
-    color: white;
+    color: #333;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -60,7 +64,7 @@ textarea {
     border: 0;
     background-color: #eff0f1;
     font-size: 16px;
-    color: white;
+    color: #333;
     padding: 20px;
     min-height: 30vh;
     box-sizing: border-box;
@@ -69,14 +73,15 @@ textarea {
 
 .flat-button {
     width: 30%;
-    color:#333;
+    color:white;
     background: 0 0;
     font: 12px;
     letter-spacing: 2px;
     text-decoration: none;
     padding: 8px 10px; 
-    border: 1px solid #333;
+    background-color: #333;
     border-radius: 4px;
+    border: 1px solid white;
     margin-bottom: 1%;
     font-weight: 500;
 }
@@ -84,6 +89,6 @@ textarea {
 .flat-button:hover {
     background-color: #333;
     color:white;
-    border: 1px solid white;
     cursor: pointer;
+    opacity: 80%;
 }

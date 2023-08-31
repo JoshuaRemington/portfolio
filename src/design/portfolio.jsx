@@ -1,9 +1,7 @@
 import './portfolio.css'
 import React, {Component} from 'react';
-//import cloudvideo from './imgs/clouds.mp4';
 import github from './imgs/github.png';
 import logo from './imgs/logo.png';
-import cloudtext from './imgs/cloudtext.png';
 import reactlogo from './imgs/reactlogo.png';
 import javascriptlogo from './imgs/javascriptlogo.svg';
 import csslogo from './imgs/csslogo.svg';
@@ -17,7 +15,7 @@ import projectPortfolio from './imgs/portfolioimage.png';
 import Contact from './contact';
 
 
-let aboutText = 'I am a college student currently in my senior year at California State University San Marcos.\n\nMy interests in programming include AI, web design, and software engineering.';
+let aboutText = 'I am Joshua Remington, a student in his last year of college. I am currently in pursuit of a bachelor\'s degree in computer science.\n\n After learning about many different areas of computer science, my favorites are AI and web development. I continue to learn about these fields by creating personal projects that excite me.\n\nI am open to work in most fields of computer science. I am looking to continue to grow as a developer and person.';
 let pathfinding = 'The Pathfinding Visualizer is an interactive web application that allows users to visualize various pathfinding algorithms in action. This tool provides a visual representation of how algorithms like Dijkstra\'s, A*, and others find the shortest path between two points on a grid. It is a great educational tool for learning and understanding different pathfinding techniques.';
 let chessdescription = 'Simple Chess game created in python that uses the minimax algorithm and alpha beta pruning. Focus on functionality and easy to use user interface';
 let portfoliodescription = 'Portfolio website made using react to showcase different skills and projects that I have created. Includes methods to contact me';
@@ -45,7 +43,6 @@ export default class Portfolio extends Component {
                 <a className='navbar-text-linking' href="/">Home</a>
             </div>
             <div className='initial-container'>
-                {/*<video className='video' src={cloudvideo} autoPlay loop muted alt='background'></video>*/}
                 <div class='cloud'>
                     <div class='rain'>
                     <span></span>
@@ -159,17 +156,14 @@ export default class Portfolio extends Component {
                     </div>
                 </div>
                 <div className='initial-text'>JOSHUA REMINGTON</div>
-                <div className='initial-subtext'>I am currently pursuing my bachelor's degree in computer science</div>
-                {/*<a className='social-link' href="https://github.com/JoshuaRemington" target="_blank" rel="noreferrer">
-                    <img className='github-image' src={github} alt='Github'></img>
-            </a>*/}
+                <div className='initial-subtext'>Computer science student at CSUSM</div>
             </div>
             <div id='about' className='divider'></div>
             <div className='section-container' style={{height: '50vh'}}>
                 <div className='section-text'>About Me</div>
                 <div className='underlining'></div>
                 <div className='textbox'>
-                    <img className='image' src={cloudtext} alt='textbox'></img>
+                    <div className='textbox-title'>Who am I?</div>
                     <div className='textbox-text'>{aboutText}</div>
                 </div>
                 <div className='skills-container'>
@@ -195,7 +189,7 @@ export default class Portfolio extends Component {
                     <div className='project-image'>
                         <a className='project-linking' href='https://github.com/JoshuaRemington/pathfindingvisualization' target='_blank' rel="noreferrer">Github</a>
                         <a className='project-linking' href='https://joshuaremington.github.io/pathfindingvisualization/' target='_blank' rel="noreferrer">Website</a>
-                        <img src={projectPathfinding} alt='pathfinding' style={{maxHeight: '25vh'}}></img>
+                        <img src={projectPathfinding} alt='pathfinding' style={{maxHeight: '30vh'}}></img>
                     </div>
                     <img className='project-logo' src={reactlogo} alt='react'></img>
                     <img className='project-logo' src={htmllogo} alt='html'></img>
@@ -207,7 +201,7 @@ export default class Portfolio extends Component {
                     <div className='project-text'>{chessdescription}</div>
                     <div className='project-image'>
                         <a className='project-linking' href='https://github.com/JoshuaRemington/chess' target='_blank' rel="noreferrer">Github</a>
-                        <img src={projectChess} alt='chess' style={{maxHeight: '25vh'}}></img>
+                        <img src={projectChess} alt='chess' style={{maxHeight: '30vh'}}></img>
                     </div>
                     <img className='project-logo' src={pythonlogo} alt='react'></img>
                 </div>
@@ -217,7 +211,7 @@ export default class Portfolio extends Component {
                     <div className='project-image'>
                         <a className='project-linking' href='https://github.com/JoshuaRemington/portfolio' target='_blank' rel="noreferrer">Github</a>
                         <a className='project-linking' href='/'>Website</a>
-                        <img src={projectPortfolio} alt='portfolio' style={{maxHeight: '25vh'}}></img>
+                        <img src={projectPortfolio} alt='portfolio' style={{maxHeight: '30vh'}}></img>
                     </div>
                     <img className='project-logo' src={reactlogo} alt='react'></img>
                     <img className='project-logo' src={htmllogo} alt='html'></img>
