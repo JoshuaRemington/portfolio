@@ -2,17 +2,22 @@
     font-family: arial;
 }
 
+.container {
+    position: relative;
+    top: 5%;
+}
+
 .contact-form {
     background-color: white;
     box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
     width: 60%;
     margin-top: 20px;
     position: relative;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%);
     border-radius: 10px;
-    height: 60vh;
+    height: 70vh;
 }
 
 ul {
@@ -66,7 +71,7 @@ textarea {
     font-size: 16px;
     color: #333;
     padding: 20px;
-    min-height: 30vh;
+    min-height: 40vh;
     box-sizing: border-box;
     resize: none;
 }
@@ -89,6 +94,6 @@ textarea {
 .flat-button:hover {
     background-color: #333;
     color:white;
-    cursor: pointer;
     opacity: 80%;
+    cursor: none;
 }

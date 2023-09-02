@@ -29,22 +29,28 @@ export default class Portfolio extends Component {
 
     
     render() {
+        window.addEventListener("mousemove", function(e){
+            const cursorGet = document.getElementById('cursor');
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorGet.style.left = `${posX}px`;
+            cursorGet.style.top = `${posY}px`;
+        });
         return( 
         <div>
+            <div class='cursor' id='cursor'></div>
             <div className='navbar'>
                 <img className='navbar-logo' src={logo} alt='Logo'></img>
                 <div className='navbar-text-1'>JOSHUA REMINGTON</div>
-                <a className='github-link' href="https://github.com/JoshuaRemington" target="_blank" rel="noreferrer">
-                    <img className='github-logo' src={github} alt='Github'></img>
-                </a>
                 <a className='navbar-text-linking' href="./#contact">Contact</a>
                 <a className='navbar-text-linking' href="./#projects">Projects</a>
                 <a className='navbar-text-linking' href="./#about">About</a>
                 <a className='navbar-text-linking' href="/">Home</a>
             </div>
             <div className='initial-container'>
-                <div class='cloud'>
-                    <div class='rain'>
+                <div className='cloud'>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -59,8 +65,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '20%', top: '10%', opacity: '30%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '20%', top: '10%', opacity: '30%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -75,8 +81,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '70%', top: '15%', opacity: '70%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '70%', top: '15%', opacity: '70%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -91,8 +97,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '-3%', top: '12%', opacity: '75%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '-3%', top: '12%', opacity: '75%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -107,8 +113,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '40%', top: '15%', opacity: '40%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '40%', top: '15%', opacity: '40%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -123,8 +129,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '55%', top: '20%', opacity: '20%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '55%', top: '20%', opacity: '20%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -139,8 +145,8 @@ export default class Portfolio extends Component {
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                     </div>
                 </div>
-                <div class='cloud' style={{left: '85%', top: '20%', opacity: '30%'}}>
-                    <div class='rain'>
+                <div className='cloud' style={{left: '85%', top: '20%', opacity: '30%'}}>
+                    <div className='rain'>
                     <span></span>
                         <span style={{animationDelay: 1 / 5 + "s"}}></span>
                         <span style={{animationDelay: 7 / 5 + "s"}}></span>
@@ -161,14 +167,12 @@ export default class Portfolio extends Component {
             <div id='about' className='divider'></div>
             <div className='section-container' style={{height: '50vh'}}>
                 <div className='section-text'>About Me</div>
-                <div className='underlining'></div>
                 <div className='textbox'>
                     <div className='textbox-title'>Who am I?</div>
                     <div className='textbox-text'>{aboutText}</div>
                 </div>
                 <div className='skills-container'>
-                    <div className='section-text'>SKILLS</div>
-                    <div className='underlining'></div>
+                    <div className='skills-text'>SKILLS</div>
                     <div className='skills'><img className='skills-logo' src={reactlogo} alt='react'></img>React</div>
                     <div className='skills'><img className='skills-logo' src={javascriptlogo} alt='react'></img>Javascript</div>
                     <div className='skills'><img className='skills-logo' src={csslogo} alt='react'></img>CSS</div>
@@ -182,7 +186,6 @@ export default class Portfolio extends Component {
             <div id='projects' className='divider'></div>
             <div className='section-container'>
                 <div className='section-text'>Projects</div>
-                <div className='underlining'></div>
                 <div className='project-container'>
                     <div className='project-title'>Pathfinding Visualizer</div>
                     <div className='project-text'>{pathfinding}</div>
@@ -222,9 +225,14 @@ export default class Portfolio extends Component {
             <div id='contact' className='divider' style={{height: '20vh'}}></div>
             <div className='section-container'>
                 <div className='section-text'>Contact</div>
-                <div className='underlining'></div>
                 <div className='contact-text'>{contactText}</div>
                 <Contact></Contact>
+                <div className='social-container'>
+                    <div className='social-button'>
+                        <a className='social-button-text' href='https://github.com/JoshuaRemington/portfolio' target='_blank' rel="noreferrer">
+                        Github</a>
+                    </div>
+                </div>
             </div>
         </div>
         );

@@ -1,5 +1,28 @@
 body {
     overflow-x: hidden;
+    cursor:none;
+}
+
+.cursor {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid aqua;
+    border-left: 10px solid transparent;
+    z-index: 1001;
+    transform: skewX(-10deg) translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -40px;
+    right: -6px;
+    border-top: 20px solid aqua;
+    border-right: 10px solid transparent;
 }
 
 .initial-container {
@@ -81,7 +104,7 @@ body {
     color: #333;
     font-size: clamp(1rem, 6vw, 6rem); 
     font-weight: 600;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .initial-subtext {
@@ -108,15 +131,6 @@ body {
     height: 10vh;
 }
 
-.underlining {
-    width: 10%;
-    height: 1vw;
-    background-color: #5AC8FA;
-    margin-bottom: 1vh;
-    position: relative;
-    left:45%;
-}
-
 .menu-image {
     width: 100%;
     height: 100%;
@@ -129,7 +143,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 100000;
+    z-index: 1000;
 }
 
 .navbar-logo {
@@ -163,21 +177,7 @@ body {
 
 .navbar-text-linking:hover {
     color: rgb(112, 182, 247);
-}
-
-.github-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2vw;
-    height: 70%;
-    z-index: 100;
-}
-
-.github-logo {
-    height: 100%;
-    width: height;
+    cursor: none;
 }
 
 .section-text {
@@ -186,6 +186,15 @@ body {
     font-weight: 700;
     position: relative;
     margin-bottom: 2vh;
+}
+
+.skills-text {
+    color: #333;
+    font-size: clamp(1vw,3vw ,3rem);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 1vh;
+    left: -10%;
 }
 
 .standard-text {
@@ -231,7 +240,7 @@ body {
 .skills-container {
     position: absolute;
     left: 65%;
-    top: 93%;
+    top: 97%;
     width: 35vw;
     height: 40vw;
 }
@@ -241,7 +250,7 @@ body {
     width: 48%;
     height: 15%;
     color: #333;
-    font-size: clamp(0.5vw, 2.5vw, 2.5vw);
+    font-size: clamp(0.5vw, 2vw, 2rem);
     padding: 0.2rem;
     display: inline-block;
     text-align: left;
@@ -249,9 +258,9 @@ body {
 
 .skills-logo {
     position: relative;
-    height: 80%;
+    height: 50%;
     width: height;
-    top: 20%;
+    top: 12%;
 }
 
 .project-container {
@@ -307,11 +316,12 @@ body {
 
 .project-linking:hover {
     color:#5AC8FA;
+    cursor: none;
 }
 
 .project-logo {
     position: relative;
-    height: 7vw;
+    height: 4vw;
     width: height;
     left: -25%;
     top: 10%;
@@ -338,12 +348,49 @@ body {
     font-size: clamp(0.5em,2.2vw,2.2em);
 }
 
-.bottom-container {
-    width: 100%;
-    height: 4vh;
+
+.social-container {
+    position: relative;;
+    display: inline-block;
+    width: 50%;
+    height: 3%;
+    margin-top: 5px;
+    top: 15%;
 }
 
-.bottom-text {
-    color: #333;
-    font-size: 1.2vh;
+.social-button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 15%;
+    color:white;
+    font: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 8px 10px; 
+    background-color: #333;
+    border-radius: 16px;
+    font-weight: 500;
 }
+
+.social-button:hover {
+    background-color: #eff0f1;
+    border: 2px solid #333;
+    cursor: none;
+}
+
+.social-button-text {
+    color:white;
+    background: 0 0;
+    font: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 8px 10px; 
+    font-weight: 500;
+}
+
+.social-button-text:hover {
+    color: #333;
+    cursor: none;
+}
+
